@@ -89,6 +89,12 @@
       <DependentUpon>DeleteRecord2.cs</DependentUpon>
     </Compile>
     <Compile Include="Firm.cs" />
+    <Compile Include="BuyerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyerForm.Designer.cs">
+      <DependentUpon>BuyerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteRecord2.resx">
       <DependentUpon>DeleteRecord2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuyerForm.resx">
+      <DependentUpon>BuyerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

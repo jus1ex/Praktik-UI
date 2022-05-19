@@ -14,10 +14,17 @@ namespace PartClass
             _price = price;
             _id = id;
         }
-        public string _name;
-        public string _price;
-        public string _id;
-        public string _amount;
+        string _name;
+        string _price;
+        string _id;
+        string _amount;
+        string _amountcart;
+        string _date;
+        public void _setamountcart(string amount)
+        {
+            _amountcart = _amount;
+        }
+        public string _getamountcart() => _amountcart;
         public string _getamount() => _amount;
         public string _getname() => _name;
         public string _getprice() => _price;

@@ -26,5 +26,30 @@ namespace Praktik_UI
         {
 
         }
+
+        private void byubutton_Click(object sender, EventArgs e)
+        {
+            int number = System.Convert.ToInt32(numberbox.Text);
+            int amount = System.Convert.ToInt32(amountbox.Text);
+            for (int i = 0; i < StorageClass.Storage.PartList.Count(); i++)
+            {
+                if (i+1==number)
+                {
+                    if (System.Convert.ToInt32(StorageClass.Storage.PartList[i]._getamount())<amount)
+                    {
+                        MessageBox.Show("Не хватет товара!", "Неудача!");
+                        return;
+                    }
+                    if (number>StorageClass.Storage.PartList.Count())
+                    {
+                        MessageBox.Show("Нет такого товара!", "Неудача!");
+                        return;
+                    }
+                    StorageClass.Storage.Cart.Add(StorageClass.Storage.PartList[i]);
+                    StorageClass.Storage.Cart[i]._setamountcart(System.Convert.ToString(amount));
+                    MessageBox.Show("Товар успешно добавлен!","Успех!");
+                }
+            }
+        }
     }
 }

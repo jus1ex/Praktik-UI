@@ -36,35 +36,40 @@ namespace Praktik_UI
             // 
             // numberbox
             // 
-            this.numberbox.Location = new System.Drawing.Point(12, 31);
+            this.numberbox.Location = new System.Drawing.Point(9, 25);
+            this.numberbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numberbox.Name = "numberbox";
-            this.numberbox.Size = new System.Drawing.Size(27, 22);
+            this.numberbox.Size = new System.Drawing.Size(21, 20);
             this.numberbox.TabIndex = 1;
             // 
             // amountbox
             // 
-            this.amountbox.Location = new System.Drawing.Point(46, 31);
+            this.amountbox.Location = new System.Drawing.Point(34, 25);
+            this.amountbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.amountbox.Name = "amountbox";
-            this.amountbox.Size = new System.Drawing.Size(100, 22);
+            this.amountbox.Size = new System.Drawing.Size(76, 20);
             this.amountbox.TabIndex = 2;
             // 
             // byubutton
             // 
-            this.byubutton.Location = new System.Drawing.Point(35, 69);
+            this.byubutton.Location = new System.Drawing.Point(26, 56);
+            this.byubutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.byubutton.Name = "byubutton";
-            this.byubutton.Size = new System.Drawing.Size(82, 27);
+            this.byubutton.Size = new System.Drawing.Size(62, 22);
             this.byubutton.TabIndex = 3;
             this.byubutton.Text = "Купить";
             this.byubutton.UseVisualStyleBackColor = true;
+            this.byubutton.Click += new System.EventHandler(this.byubutton_Click);
             // 
             // BuyMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(158, 108);
+            this.ClientSize = new System.Drawing.Size(120, 88);
             this.Controls.Add(this.byubutton);
             this.Controls.Add(this.amountbox);
             this.Controls.Add(this.numberbox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BuyMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Купить";

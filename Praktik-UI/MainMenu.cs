@@ -26,7 +26,8 @@ namespace Praktik_UI
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            BuyerForm buyerForm = new BuyerForm();
+            buyerForm.Show();
         }
 
         private void exit_Click(object sender, EventArgs e)
