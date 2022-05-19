@@ -21,20 +21,17 @@ namespace Praktik_UI
         private void button2_Click(object sender, EventArgs e)
         {
 
-            string path = @"C:\Users\Honor\OneDrive\Рабочий стол\Practic\AutoDoc.txt";
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\AutoDoc.txt"; ;
 
 
             
                 for (int i = 0; i < StorageClass.Storage.PartList.Count(); i++)
                 {
-                       string s = " " + StorageClass.Storage.PartList[i]._getid() + " " + StorageClass.Storage.PartList[i]._getname() + " " + StorageClass.Storage.PartList[i]._getamount() + " " + StorageClass.Storage.PartList[i]._getprice();
+                       string s =StorageClass.Storage.PartList[i]._getid() + " " + StorageClass.Storage.PartList[i]._getname() + " " + StorageClass.Storage.PartList[i]._getamount() + " " + StorageClass.Storage.PartList[i]._getprice()+'\n';
                        File.AppendAllText(path,s);
                 }
                 
                 MessageBox.Show("Информация выведена в файл!", "Успех!");
-            
-            
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -114,6 +111,11 @@ namespace Praktik_UI
         private void Suppliers_Load(object sender, EventArgs e)
         {
             StorageClass.Storage.PartList.Clear();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

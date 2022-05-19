@@ -30,20 +30,21 @@ namespace Praktik_UI
         private void InitializeComponent()
         {
             this.SuppliersGrid = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button4 = new System.Windows.Forms.Button();
             this.nomer1Col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button4 = new System.Windows.Forms.Button();
             this.buy = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SuppliersGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,62 +59,15 @@ namespace Praktik_UI
             this.nameCol,
             this.amountCol,
             this.priceCol});
-            this.SuppliersGrid.Location = new System.Drawing.Point(1, 12);
+            this.SuppliersGrid.Location = new System.Drawing.Point(1, 10);
+            this.SuppliersGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SuppliersGrid.Name = "SuppliersGrid";
             this.SuppliersGrid.ReadOnly = true;
             this.SuppliersGrid.RowHeadersWidth = 51;
             this.SuppliersGrid.RowTemplate.Height = 24;
-            this.SuppliersGrid.Size = new System.Drawing.Size(607, 426);
+            this.SuppliersGrid.Size = new System.Drawing.Size(455, 346);
             this.SuppliersGrid.TabIndex = 0;
             this.SuppliersGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SuppliersGrid_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(639, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Загрузка из файла";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(639, 60);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 42);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Сохранение в файл";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(639, 108);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 42);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Добавление запчасти";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button4.Location = new System.Drawing.Point(639, 156);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 42);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Обновить";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // nomer1Col
             // 
@@ -154,12 +108,65 @@ namespace Praktik_UI
             this.priceCol.ReadOnly = true;
             this.priceCol.Width = 125;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(479, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Загрузка из файла";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.Location = new System.Drawing.Point(479, 49);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 34);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Сохранение в файл";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button3.Location = new System.Drawing.Point(479, 88);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(112, 34);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Добавление запчасти";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button4.Location = new System.Drawing.Point(479, 127);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(112, 34);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Обновить";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // buy
             // 
             this.buy.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buy.Location = new System.Drawing.Point(639, 204);
+            this.buy.Location = new System.Drawing.Point(479, 166);
+            this.buy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buy.Name = "buy";
-            this.buy.Size = new System.Drawing.Size(149, 42);
+            this.buy.Size = new System.Drawing.Size(112, 34);
             this.buy.TabIndex = 5;
             this.buy.Text = "Купить";
             this.buy.UseVisualStyleBackColor = false;
@@ -169,9 +176,10 @@ namespace Praktik_UI
             // 
             this.back.BackColor = System.Drawing.Color.DimGray;
             this.back.ForeColor = System.Drawing.Color.AliceBlue;
-            this.back.Location = new System.Drawing.Point(639, 348);
+            this.back.Location = new System.Drawing.Point(479, 283);
+            this.back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(149, 42);
+            this.back.Size = new System.Drawing.Size(112, 34);
             this.back.TabIndex = 6;
             this.back.Text = "Назад";
             this.back.UseVisualStyleBackColor = false;
@@ -181,9 +189,10 @@ namespace Praktik_UI
             // 
             this.exit.BackColor = System.Drawing.Color.DimGray;
             this.exit.ForeColor = System.Drawing.Color.AliceBlue;
-            this.exit.Location = new System.Drawing.Point(639, 396);
+            this.exit.Location = new System.Drawing.Point(479, 322);
+            this.exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(149, 42);
+            this.exit.Size = new System.Drawing.Size(112, 34);
             this.exit.TabIndex = 7;
             this.exit.Text = "Выход";
             this.exit.UseVisualStyleBackColor = false;
@@ -192,19 +201,31 @@ namespace Praktik_UI
             // delete
             // 
             this.delete.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.delete.Location = new System.Drawing.Point(639, 252);
+            this.delete.Location = new System.Drawing.Point(479, 205);
+            this.delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(149, 42);
+            this.delete.Size = new System.Drawing.Size(112, 34);
             this.delete.TabIndex = 8;
             this.delete.Text = "Удалить";
             this.delete.UseVisualStyleBackColor = false;
             this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(479, 245);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(112, 34);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Подтвердить";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Suppliers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.back);
@@ -214,6 +235,7 @@ namespace Praktik_UI
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SuppliersGrid);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Suppliers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoDoc";
@@ -240,5 +262,6 @@ namespace Praktik_UI
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button button5;
     }
 }

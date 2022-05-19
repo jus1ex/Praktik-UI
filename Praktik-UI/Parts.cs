@@ -19,7 +19,12 @@ namespace PartClass
         string _id;
         string _amount;
         string _amountcart;
-        string _date;
+        DateTime _date;
+        public void _setdate(DateTime date)
+        {
+            _date = date;
+        }
+        public DateTime _getdate() => _date;
         public void _setamountcart(string amount)
         {
             _amountcart = _amount;

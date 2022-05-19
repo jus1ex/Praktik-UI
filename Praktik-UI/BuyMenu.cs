@@ -33,7 +33,7 @@ namespace Praktik_UI
             int amount = System.Convert.ToInt32(amountbox.Text);
             for (int i = 0; i < StorageClass.Storage.PartList.Count(); i++)
             {
-                if (i+1==number)
+                if (i==number-1)
                 {
                     if (System.Convert.ToInt32(StorageClass.Storage.PartList[i]._getamount())<amount)
                     {
@@ -47,6 +47,7 @@ namespace Praktik_UI
                     }
                     StorageClass.Storage.Cart.Add(StorageClass.Storage.PartList[i]);
                     StorageClass.Storage.Cart[i]._setamountcart(System.Convert.ToString(amount));
+                    StorageClass
                     MessageBox.Show("Товар успешно добавлен!","Успех!");
                 }
             }
