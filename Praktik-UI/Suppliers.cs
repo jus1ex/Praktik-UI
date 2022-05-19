@@ -111,11 +111,40 @@ namespace Praktik_UI
         private void Suppliers_Load(object sender, EventArgs e)
         {
             StorageClass.Storage.PartList.Clear();
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\AutoDoc.txt"; ;
+            if (File.Exists(path))
+            {
+                StreamReader reader = new StreamReader(path);
+                string StringToRead;
+                while ((StringToRead = reader.ReadLine()) != null)
+                {
+                    string[] PartsInfo = StringToRead.Split(' ');
+                    string PartName = PartsInfo[1];
+                    string PartId = PartsInfo[0];
+                    string PartAmount = PartsInfo[2];
+                    string PartPrice = PartsInfo[3];
+                    PartClass.Part NewPart = new PartClass.Part(PartName, PartAmount, PartPrice, PartId);
+                    StorageClass.Storage.PartList.Add(NewPart);
+                }
+                reader.Close();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            if(StorageClass.Storage.Cart.Count == 0)
+            {
+                MessageBox.Show("Корзина пуста!", "Неудача!");
+                return;
+            }
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\AutoDocOrders.txt"; ;
+            for (int i = 0; i < StorageClass.Storage.Cart.Count(); i++)
+            {
+                string s = StorageClass.Storage.Cart[i]._getid() + " " + StorageClass.Storage.Cart[i]._getname() +  " " + StorageClass.Storage.Cart[i]._getprice() +" Количество: "+ StorageClass.Storage.Cart[i]._getamountcart()+" Дата заказа: "+StorageClass.Storage.Cart[i]._getdate()+'\n';
+                File.AppendAllText(path, s);
+            }
+            StorageClass.Storage.Cart.Clear();
+            MessageBox.Show("Заказ оформлен!", "Успех!");
         }
     }
 }

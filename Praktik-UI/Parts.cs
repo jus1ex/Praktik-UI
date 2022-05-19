@@ -27,7 +27,7 @@ namespace PartClass
         public DateTime _getdate() => _date;
         public void _setamountcart(string amount)
         {
-            _amountcart = _amount;
+            _amountcart = amount;
         }
         public string _getamountcart() => _amountcart;
         public string _getamount() => _amount;

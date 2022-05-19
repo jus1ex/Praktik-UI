@@ -84,18 +84,36 @@ namespace Praktik_UI
         private void Suppliers1_Load(object sender, EventArgs e)
         {
             StorageClass.Storage.PartList.Clear();
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\CarHelp.txt"; ;
+            if (File.Exists(path))
+            {
+                StreamReader reader = new StreamReader(path);
+                string StringToRead;
+                while ((StringToRead = reader.ReadLine()) != null)
+                {
+                    string[] PartsInfo = StringToRead.Split(' ');
+                    string PartName = PartsInfo[1];
+                    string PartId = PartsInfo[0];
+                    string PartAmount = PartsInfo[2];
+                    string PartPrice = PartsInfo[3];
+                    PartClass.Part NewPart = new PartClass.Part(PartName, PartAmount, PartPrice, PartId);
+                    StorageClass.Storage.PartList.Add(NewPart);
+                }
+                reader.Close();
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-            string path = @"C:\Users\Honor\OneDrive\Рабочий стол\Practic\CarHelp.txt";
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\CarHelp.txt"; ;
 
 
 
             for (int i = 0; i < StorageClass.Storage.PartList.Count(); i++)
             {
-                string s = " " + StorageClass.Storage.PartList[i]._getid() + " " + StorageClass.Storage.PartList[i]._getname() + " " + StorageClass.Storage.PartList[i]._getamount() + " " + StorageClass.Storage.PartList[i]._getprice();
+                string s = StorageClass.Storage.PartList[i]._getid() + " " + StorageClass.Storage.PartList[i]._getname() + " " + StorageClass.Storage.PartList[i]._getamount() + " " + StorageClass.Storage.PartList[i]._getprice()+"\n";
                 File.AppendAllText(path, s);
             }
 
@@ -108,6 +126,30 @@ namespace Praktik_UI
         {
             DeleteRecord1 dr1 = new DeleteRecord1();
             dr1.Show();
+        }
+
+        private void buy1_Click(object sender, EventArgs e)
+        {
+            BuyMenu newform=new BuyMenu();
+            newform.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (StorageClass.Storage.Cart.Count == 0)
+            {
+                MessageBox.Show("Корзина пуста!", "Неудача!");
+                return;
+            }
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\CarHelpOrders.txt"; ;
+            for (int i = 0; i < StorageClass.Storage.Cart.Count(); i++)
+            {
+                string s = StorageClass.Storage.Cart[i]._getid() + " " + StorageClass.Storage.Cart[i]._getname() + " " + StorageClass.Storage.Cart[i]._getprice() + " Количество: " + StorageClass.Storage.Cart[i]._getamountcart() + " Дата заказа: " + StorageClass.Storage.Cart[i]._getdate() + '\n';
+                File.AppendAllText(path, s);
+            }
+            StorageClass.Storage.Cart.Clear();
+            MessageBox.Show("Заказ оформлен!", "Успех!");
+
         }
     }
 }

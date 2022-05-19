@@ -47,8 +47,26 @@ namespace Praktik_UI
                     }
                     StorageClass.Storage.Cart.Add(StorageClass.Storage.PartList[i]);
                     StorageClass.Storage.Cart[i]._setamountcart(System.Convert.ToString(amount));
-                    StorageClass
-                    MessageBox.Show("Товар успешно добавлен!","Успех!");
+                    StorageClass.Storage.Cart[i]._setdate(DateTime.Now);
+                    for (int j = 0; j < StorageClass.Storage.Cart.Count(); j++)
+                    {
+                        for(int k = 0; k < StorageClass.Storage.PartList.Count(); k++)
+                        {
+                            if (StorageClass.Storage.PartList[k]._getid()==StorageClass.Storage.Cart[j]._getid())
+                            {
+                                int NewProductAmount = System.Convert.ToInt32(StorageClass.Storage.PartList[k]._getamount()) - System.Convert.ToInt32(StorageClass.Storage.Cart[j]._getamountcart());
+                                StorageClass.Storage.PartList[j]._setamount(System.Convert.ToString(NewProductAmount));
+                            }
+                        }
+                    }
+                    MessageBox.Show("Товар успешно добавлен!", "Успех!");
+                }
+            }
+            for (int i = 0; i < StorageClass.Storage.PartList.Count(); i++)
+            {
+                if (StorageClass.Storage.PartList[i]._getamount() == "0")
+                {
+                    StorageClass.Storage.PartList.RemoveAt(i);
                 }
             }
         }
