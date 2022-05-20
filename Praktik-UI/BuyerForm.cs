@@ -24,7 +24,7 @@ namespace Praktik_UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Suppliers NewForm=new Suppliers();
+            SuppliersOrder NewForm=new SuppliersOrder();
             NewForm.Show();
         }
     }
