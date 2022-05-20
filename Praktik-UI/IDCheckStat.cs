@@ -100,7 +100,7 @@ namespace Praktik_UI
                 return;
             }
             string ID = textBoxArticle.Text;
-            if (CheckID(ID))
+            if (CheckID(ID)==false)
             {
                 MessageBox.Show("Неверный формат артикула!", "Ошибка!");
                 return;
