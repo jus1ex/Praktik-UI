@@ -103,9 +103,9 @@ namespace Praktik_UI
                     StorageClass.Storage.Cart[i]._setdate(DateTime.Now);
                     for(int j = 0; j < StorageClass.Storage.PartList.Count(); j++)
                     {
-                        if (StorageClass.Storage.PartList[j]._getid()==StorageClass.Storage.Cart[i]._getid())
+                        if (StorageClass.Storage.PartList[j]._getid()==StorageClass.Storage.Cart[StorageClass.Storage.Cart.Count()-1]._getid())
                         {
-                            int newamount = System.Convert.ToInt32(StorageClass.Storage.PartList[j]._getamount()) - System.Convert.ToInt32(StorageClass.Storage.Cart[i]._getamountcart());
+                            int newamount = System.Convert.ToInt32(StorageClass.Storage.PartList[j]._getamount()) - System.Convert.ToInt32(StorageClass.Storage.Cart[StorageClass.Storage.Cart.Count()-1]._getamountcart());
                             StorageClass.Storage.PartList[j]._setamount(System.Convert.ToString(newamount));
                         }
                     }
