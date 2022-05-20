@@ -101,15 +101,12 @@ namespace Praktik_UI
                     StorageClass.Storage.Cart.Add(StorageClass.Storage.PartList[i]);
                     StorageClass.Storage.Cart[i]._setamountcart(System.Convert.ToString(amount));
                     StorageClass.Storage.Cart[i]._setdate(DateTime.Now);
-                    for (int j = 0; j < StorageClass.Storage.Cart.Count(); j++)
+                    for(int j = 0; j < StorageClass.Storage.PartList.Count(); j++)
                     {
-                        for(int k = 0; k < StorageClass.Storage.PartList.Count(); k++)
+                        if (StorageClass.Storage.PartList[j]._getid()==StorageClass.Storage.Cart[i]._getid())
                         {
-                            if (StorageClass.Storage.PartList[k]._getid()==StorageClass.Storage.Cart[j]._getid())
-                            {
-                                int NewProductAmount = System.Convert.ToInt32(StorageClass.Storage.PartList[k]._getamount()) - System.Convert.ToInt32(StorageClass.Storage.Cart[j]._getamountcart());
-                                StorageClass.Storage.PartList[j]._setamount(System.Convert.ToString(NewProductAmount));
-                            }
+                            int newamount = System.Convert.ToInt32(StorageClass.Storage.PartList[j]._getamount()) - System.Convert.ToInt32(StorageClass.Storage.Cart[i]._getamountcart());
+                            StorageClass.Storage.PartList[j]._setamount(System.Convert.ToString(newamount));
                         }
                     }
                     MessageBox.Show("Товар успешно добавлен!", "Успех!");
