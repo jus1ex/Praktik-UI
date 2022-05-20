@@ -26,7 +26,8 @@ namespace Praktik_UI
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            IDCheckStat NewForm=new IDCheckStat();
+            NewForm.Show();
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -44,7 +45,8 @@ namespace Praktik_UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            SuppliersStat NewForm=new SuppliersStat();
+            NewForm.Show();
         }
     }
 

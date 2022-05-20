@@ -76,7 +76,7 @@ namespace Praktik_UI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AddRecord2 add = new AddRecord2();
+            AddRecord add = new AddRecord();
             add.Show();
 
         }
@@ -118,7 +118,7 @@ namespace Praktik_UI
         }
         private void button6_Click(object sender, EventArgs e)
         {
-            DeleteRecord2 dr2 = new DeleteRecord2();
+            DeleteRecord dr2 = new DeleteRecord();
             dr2.Show();
         }
 

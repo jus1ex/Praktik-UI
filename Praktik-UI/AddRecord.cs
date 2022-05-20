@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Praktik_UI
 {
@@ -27,16 +28,92 @@ namespace Praktik_UI
         {
 
             string PartId = textBoxArticle.Text;
+            if (CheckID(PartId)==false)
+            {
+                MessageBox.Show("Неверный формат артикула!", "Ошибка!");
+                return;
+            }
             string PartName = textBoxName.Text;
+            if (CheckName(PartName)==false)
+            {
+                MessageBox.Show("Неверный формат названия!", "Ошибка!");
+                return;
+            }
             string PartAmount = textBoxAmount.Text;
+            if (CheckAmount(PartAmount) == false)
+            {
+                MessageBox.Show("Неверный формат количества!", "Ошибка!");
+                return;
+            }
             string PartPrice = textBoxPrice.Text;
+            if (CheckPrice(PartPrice) == false)
+            {
+                MessageBox.Show("Неверный формат цены!", "Ошибка!");
+                return;
+            }
             PartClass.Part NewPart = new PartClass.Part(PartName, PartAmount, PartPrice, PartId);
             StorageClass.Storage.PartList.Add(NewPart);
             MessageBox.Show("Товар успешно добавлен!", "Успех!");
         }
 
        
+        private bool CheckID(string ID)
+        {
+            Regex regex = new Regex(@"[\d]+");
+            if (regex.IsMatch(ID))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        private bool CheckAmount(string amount)
+        {
+            Regex regex = new Regex(@"[\d]+");
+            if (regex.IsMatch(amount))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
+        private bool CheckPrice(string price)
+        {
+            Regex regex = new Regex(@"[\d]+");
+            if (regex.IsMatch(price))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+
+
+        private bool CheckName(string Name)
+        {
+            Regex regex = new Regex(@"[\p{IsCyrillic}]+");
+            if ((Name == "Название") || (string.IsNullOrEmpty(Name)))
+            {
+                return false;
+            }
+            else if (regex.IsMatch(Name))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void textBoxArticle_Enter(object sender, EventArgs e)
         {
             if (textBoxArticle.Text == "Артикул")

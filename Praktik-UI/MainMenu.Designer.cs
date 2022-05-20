@@ -29,6 +29,7 @@ namespace Praktik_UI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
@@ -37,9 +38,10 @@ namespace Praktik_UI
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(55, 100);
+            this.button1.Location = new System.Drawing.Point(62, 125);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 70);
+            this.button1.Size = new System.Drawing.Size(209, 88);
             this.button1.TabIndex = 0;
             this.button1.Text = "Меню менеджера";
             this.button1.UseVisualStyleBackColor = false;
@@ -48,9 +50,10 @@ namespace Praktik_UI
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(358, 100);
+            this.button2.Location = new System.Drawing.Point(403, 125);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 70);
+            this.button2.Size = new System.Drawing.Size(209, 88);
             this.button2.TabIndex = 1;
             this.button2.Text = "Меню покупателя";
             this.button2.UseVisualStyleBackColor = false;
@@ -60,9 +63,10 @@ namespace Praktik_UI
             // 
             this.exit.BackColor = System.Drawing.Color.DimGray;
             this.exit.ForeColor = System.Drawing.Color.AliceBlue;
-            this.exit.Location = new System.Drawing.Point(203, 229);
+            this.exit.Location = new System.Drawing.Point(228, 286);
+            this.exit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(186, 70);
+            this.exit.Size = new System.Drawing.Size(209, 88);
             this.exit.TabIndex = 2;
             this.exit.Text = "Выход";
             this.exit.UseVisualStyleBackColor = false;
@@ -70,12 +74,15 @@ namespace Praktik_UI
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 327);
+            this.ClientSize = new System.Drawing.Size(665, 409);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное меню";

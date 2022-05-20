@@ -52,18 +52,6 @@
     <Compile Include="AddRecord.Designer.cs">
       <DependentUpon>AddRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddRecord1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddRecord1.Designer.cs">
-      <DependentUpon>AddRecord1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddRecord2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddRecord2.Designer.cs">
-      <DependentUpon>AddRecord2.cs</DependentUpon>
-    </Compile>
     <Compile Include="BuyMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,18 +64,6 @@
     <Compile Include="DeleteRecord.Designer.cs">
       <DependentUpon>DeleteRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteRecord1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteRecord1.Designer.cs">
-      <DependentUpon>DeleteRecord1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DeleteRecord2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteRecord2.Designer.cs">
-      <DependentUpon>DeleteRecord2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Firm.cs" />
     <Compile Include="BuyerForm.cs">
       <SubType>Form</SubType>
@@ -95,11 +71,23 @@
     <Compile Include="BuyerForm.Designer.cs">
       <DependentUpon>BuyerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="IDCheckStat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="IDCheckStat.Designer.cs">
+      <DependentUpon>IDCheckStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuppliersOrder3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuppliersOrder3.Designer.cs">
+      <DependentUpon>SuppliersOrder3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuppliersOrder2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuppliersOrder2.Designer.cs">
+      <DependentUpon>SuppliersOrder2.cs</DependentUpon>
     </Compile>
     <Compile Include="SuppliersOrder.cs">
       <SubType>Form</SubType>
@@ -148,14 +136,14 @@
     <Compile Include="Suppliers2.Designer.cs">
       <DependentUpon>Suppliers2.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuppliersStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuppliersStat.Designer.cs">
+      <DependentUpon>SuppliersStat.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddRecord.resx">
       <DependentUpon>AddRecord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddRecord1.resx">
-      <DependentUpon>AddRecord1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddRecord2.resx">
-      <DependentUpon>AddRecord2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuyMenu.resx">
       <DependentUpon>BuyMenu.cs</DependentUpon>
@@ -163,14 +151,11 @@
     <EmbeddedResource Include="DeleteRecord.resx">
       <DependentUpon>DeleteRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteRecord1.resx">
-      <DependentUpon>DeleteRecord1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeleteRecord2.resx">
-      <DependentUpon>DeleteRecord2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BuyerForm.resx">
       <DependentUpon>BuyerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDCheckStat.resx">
+      <DependentUpon>IDCheckStat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -201,6 +186,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SuppliersOrder.resx">
       <DependentUpon>SuppliersOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuppliersOrder2.resx">
+      <DependentUpon>SuppliersOrder2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuppliersOrder3.resx">
+      <DependentUpon>SuppliersOrder3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuppliersStat.resx">
+      <DependentUpon>SuppliersStat.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -29,6 +29,7 @@ namespace Praktik_UI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyMenu));
             this.numberbox = new System.Windows.Forms.TextBox();
             this.amountbox = new System.Windows.Forms.TextBox();
             this.byubutton = new System.Windows.Forms.Button();
@@ -36,26 +37,27 @@ namespace Praktik_UI
             // 
             // numberbox
             // 
-            this.numberbox.Location = new System.Drawing.Point(9, 25);
-            this.numberbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numberbox.Location = new System.Drawing.Point(12, 38);
             this.numberbox.Name = "numberbox";
-            this.numberbox.Size = new System.Drawing.Size(21, 20);
+            this.numberbox.Size = new System.Drawing.Size(118, 26);
             this.numberbox.TabIndex = 1;
+            this.numberbox.Enter += new System.EventHandler(this.numberbox_Enter);
+            this.numberbox.Leave += new System.EventHandler(this.numberbox_Leave);
             // 
             // amountbox
             // 
-            this.amountbox.Location = new System.Drawing.Point(34, 25);
-            this.amountbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amountbox.Location = new System.Drawing.Point(140, 38);
             this.amountbox.Name = "amountbox";
-            this.amountbox.Size = new System.Drawing.Size(76, 20);
+            this.amountbox.Size = new System.Drawing.Size(112, 26);
             this.amountbox.TabIndex = 2;
+            this.amountbox.Enter += new System.EventHandler(this.amountbox_Enter);
+            this.amountbox.Leave += new System.EventHandler(this.amountbox_Leave);
             // 
             // byubutton
             // 
-            this.byubutton.Location = new System.Drawing.Point(26, 56);
-            this.byubutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.byubutton.Location = new System.Drawing.Point(81, 70);
             this.byubutton.Name = "byubutton";
-            this.byubutton.Size = new System.Drawing.Size(62, 22);
+            this.byubutton.Size = new System.Drawing.Size(93, 34);
             this.byubutton.TabIndex = 3;
             this.byubutton.Text = "Купить";
             this.byubutton.UseVisualStyleBackColor = true;
@@ -63,13 +65,14 @@ namespace Praktik_UI
             // 
             // BuyMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(120, 88);
+            this.ClientSize = new System.Drawing.Size(264, 135);
             this.Controls.Add(this.byubutton);
             this.Controls.Add(this.amountbox);
             this.Controls.Add(this.numberbox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "BuyMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Купить";

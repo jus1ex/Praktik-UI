@@ -12,5 +12,7 @@ namespace StorageClass
     public static SupplierClass.Supplier Vehicle_Tuning = new SupplierClass.Supplier("Vehicle-Tuning" , "г. Краснодар, ул. Володи Головатого д. 91" , "+79208886899");
     public static List<PartClass.Part> PartList = new List<PartClass.Part> { };
     public static List<PartClass.Part> Cart = new List<PartClass.Part> { };
+        public static List<PartClass.Part> IDCheck=new List<PartClass.Part> { };
+        public static List<PartClass.Part>SupplierCheck=new List<PartClass.Part> { };
     }
 }

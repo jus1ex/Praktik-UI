@@ -27,5 +27,23 @@ namespace Praktik_UI
             SuppliersOrder NewForm=new SuppliersOrder();
             NewForm.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SuppliersOrder2 NewForm=new SuppliersOrder2();
+            NewForm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SuppliersOrder3 NewForm=new SuppliersOrder3();
+            NewForm.Show();
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            MainMenu NewForm = new MainMenu();
+            NewForm.Show();
+        }
     }
 }
